@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int numeros[5];
+    int suma = 0;
+
+    // 1. Leer los 5 números y acumular la suma
+    for (int i = 0; i < 5; i++) {
+        cin >> numeros[i];
+        suma += numeros[i]; // Equivale a: suma = suma + numeros[i]
+    }
+
+    cout << "Suma = " << suma << endl;
+
+    return 0;
+}
