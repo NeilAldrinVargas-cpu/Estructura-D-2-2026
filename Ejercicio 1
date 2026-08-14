@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int numeros[5];
+
+    // 1. Leer los 5 números enteros
+    for (int i = 0; i < 5; i++) {
+        cin >> numeros[i];
+    }
+
+    for (int i = 0; i < 5; i++) {
+        cout << numeros[i] << " ";
+    }
+
+    cout << endl; // Salto de línea al final
+
+    return 0;
+}
