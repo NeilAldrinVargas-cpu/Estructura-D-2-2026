@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int originales[5];
+    int cuadrados[5];
+
+    // 1. Leer los 5 números enteros
+    for (int i = 0; i < 5; i++) {
+        cin >> originales[i];
+    }
+
+    // 2. Calcular el cuadrado de cada valor y guardarlo en el segundo arreglo
+    for (int i = 0; i < 5; i++) {
+        cuadrados[i] = originales[i] * originales[i];
+    }
+
+    // 3. Mostrar el segundo arreglo con los resultados
+    for (int i = 0; i < 5; i++) {
+        cout << cuadrados[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
