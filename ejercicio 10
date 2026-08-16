@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int numero;
+    int impares = 0;
+
+    // Leer 10 números uno por uno
+    for (int i = 0; i < 10; i++) {
+        cin >> numero;
+        
+        // Comprobar si el número es impar
+        if (numero % 2 != 0) {
+            impares++;
+        }
+    }
+
+    // Mostrar el resultado final
+    cout << "Impares = " << impares << endl;
+
+    return 0;
+}
