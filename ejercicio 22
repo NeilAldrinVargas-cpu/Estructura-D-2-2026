@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n;
+    int numeros[50]; // Tamaño máximo para cubrir el rango típico de N
+
+    // 1. Leer N
+    cin >> n;
+
+    // 2. Leer los N números enteros
+    for (int i = 0; i < n; i++) {
+        cin >> numeros[i];
+    }
+
+    // 3. Guardar el último elemento antes de desplazar
+    int ultimo = numeros[n - 1];
+
+    // 4. Desplazar los elementos hacia la derecha (de atrás hacia adelante)
+    for (int i = n - 1; i > 0; i--) {
+        numeros[i] = numeros[i - 1];
+    }
+
+    // 5. Colocar el último elemento en la primera posición (índice 0)
+    numeros[0] = ultimo;
+
+    // 6. Mostrar el arreglo resultante
+    for (int i = 0; i < n; i++) {
+        cout << numeros[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
