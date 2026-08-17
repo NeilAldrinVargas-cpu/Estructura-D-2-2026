@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int numeros[10];
+    int x;
+    int apariciones = 0;
+
+    // 1. Leer los 10 números enteros
+    for (int i = 0; i < 10; i++) {
+        cin >> numeros[i];
+    }
+
+    // 2. Leer el valor X a buscar
+    cin >> x;
+
+    // 3. Contar cuántas veces aparece X en el arreglo
+    for (int i = 0; i < 10; i++) {
+        if (numeros[i] == x) {
+            apariciones++;
+        }
+    }
+
+    // 4. Mostrar el resultado
+    cout << "Apariciones = " << apariciones << endl;
+
+    return 0;
+}
