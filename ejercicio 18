@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int numeros[10];
+    int x;
+    int posicion = -1; // Se inicializa en -1 por si no se encuentra
+
+    // 1. Leer los 10 números enteros
+    for (int i = 0; i < 10; i++) {
+        cin >> numeros[i];
+    }
+
+    // 2. Leer el valor X a buscar
+    cin >> x;
+
+    // 3. Buscar la primera aparición del número X
+    for (int i = 0; i < 10; i++) {
+        if (numeros[i] == x) {
+            posicion = i; // Guardamos el primer índice hallado
+            break;        // Detenemos el bucle inmediatamente
+        }
+    }
+
+    // 4. Mostrar el resultado
+    cout << "Primera posición = " << posicion << endl;
+
+    return 0;
+}
