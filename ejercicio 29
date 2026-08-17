@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n;
+    int numeros[50];
+
+    // 1. Leer la cantidad de elementos N
+    cin >> n;
+
+    // 2. Leer los N números enteros
+    for (int i = 0; i < n; i++) {
+        cin >> numeros[i];
+    }
+
+    // 3. Buscar el valor mayor (primer mayor)
+    int mayor = numeros[0];
+    for (int i = 1; i < n; i++) {
+        if (numeros[i] > mayor) {
+            mayor = numeros[i];
+        }
+    }
+
+    // 4. Buscar el segundo mayor estrictamente menor que 'mayor'
+    int segundoMayor;
+    bool existeSegundo = false;
+
+    for (int i = 0; i < n; i++) {
+        if (numeros[i] < mayor) {
+            if (!existeSegundo || numeros[i] > segundoMayor) {
+                segundoMayor = numeros[i];
+                existeSegundo = true;
+            }
+        }
+    }
+
+    // 5. Mostrar el resultado
+    if (existeSegundo) {
+        cout << "Segundo mayor = " << segundoMayor << endl;
+    } else {
+        cout << "No existe segundo mayor distinto" << endl;
+    }
+
+    return 0;
+}
