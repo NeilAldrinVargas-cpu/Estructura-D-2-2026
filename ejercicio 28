@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n;
+    int numeros[50];
+
+    // 1. Leer la cantidad de elementos N
+    cin >> n;
+
+    // 2. Leer los N números enteros
+    for (int i = 0; i < n; i++) {
+        cin >> numeros[i];
+    }
+
+    // 3. Inicializar el máximo y mínimo con el primer elemento
+    int maximo = numeros[0];
+    int minimo = numeros[0];
+
+    // 4. Buscar el valor máximo y el mínimo en el arreglo
+    for (int i = 1; i < n; i++) {
+        if (numeros[i] > maximo) {
+            maximo = numeros[i];
+        }
+        if (numeros[i] < minimo) {
+            minimo = numeros[i];
+        }
+    }
+
+    // 5. Mostrar la diferencia (máximo - mínimo)
+    cout << "Diferencia = " << (maximo - minimo) << endl;
+
+    return 0;
+}
