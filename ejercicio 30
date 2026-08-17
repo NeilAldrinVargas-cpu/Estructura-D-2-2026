@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n;
+    int numeros[50];
+
+    // 1. Leer la cantidad de elementos N
+    cin >> n;
+
+    // 2. Leer los N números enteros
+    for (int i = 0; i < n; i++) {
+        cin >> numeros[i];
+    }
+
+    // 3. Buscar el valor menor absoluto (primer menor)
+    int menor = numeros[0];
+    for (int i = 1; i < n; i++) {
+        if (numeros[i] < menor) {
+            menor = numeros[i];
+        }
+    }
+
+    // 4. Buscar el segundo menor estrictamente mayor que 'menor'
+    int segundoMenor;
+    bool existeSegundo = false;
+
+    for (int i = 0; i < n; i++) {
+        if (numeros[i] > menor) {
+            if (!existeSegundo || numeros[i] < segundoMenor) {
+                segundoMenor = numeros[i];
+                existeSegundo = true;
+            }
+        }
+    }
+
+    // 5. Mostrar el resultado
+    if (existeSegundo) {
+        cout << "Segundo menor = " << segundoMenor << endl;
+    } else {
+        cout << "No existe segundo menor distinto" << endl;
+    }
+
+    return 0;
+}
