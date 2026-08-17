@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int numeros[8];
+    int x;
+    bool encontrado = false;
+
+    for (int i = 0; i < 8; i++) {
+        cin >> numeros[i];
+    }
+
+    cin >> x;
+
+    // 3. Buscar si X está en el arreglo
+    for (int i = 0; i < 8; i++) {
+        if (numeros[i] == x) {
+            encontrado = true;
+            break; // Si lo encuentra, detiene la búsqueda inmediatamente
+        }
+    }
+
+    // 4. Mostrar el resultado
+    if (encontrado) {
+        cout << "Encontrado" << endl;
+    } else {
+        cout << "No encontrado" << endl;
+    }
+
+    return 0;
+}
